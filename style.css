@@ -1,0 +1,184 @@
+body {
+  font-family: "Dancing Script", cursive;
+  background-color: #f8f1e1;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
+.button-container {
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #ff5e5e;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #e54d4d;
+}
+
+.loading-container {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.heart {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  transform: rotate(-45deg);
+  background-color: #ff5e5e;
+  animation: beat 1s infinite;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #ff5e5e;
+}
+
+.heart::before {
+  top: -50px;
+  left: 0;
+}
+
+.heart::after {
+  left: 50px;
+  top: 0;
+}
+
+@keyframes beat {
+  0%,
+  100% {
+    transform: scale(1) rotate(-45deg);
+  }
+  50% {
+    transform: scale(1.1) rotate(-45deg);
+  }
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+  border: 2px solid #f7d9c4;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #ff5e5e;
+}
+
+.letter-container {
+  background-color: #fff8e7;
+  border: 2px solid #d4c2a4;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+  font-family: "Dancing Script", cursive;
+  line-height: 1.8;
+}
+
+.message {
+  font-size: 1.1em;
+  color: #555;
+}
+
+.photo-gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hearts {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Allows clicks to pass through */
+}
+
+.heart1 {
+  top: 40px;
+  left: 20px;
+  animation: float 10s infinite;
+}
+
+.heart2 {
+  top: 500px;
+  right: 30px;
+  animation: float 8s infinite;
+}
+
+.heart3 {
+  bottom: 100px;
+  left: 90%;
+  animation: float 5s infinite;
+}
+
+.heart4 {
+  bottom: 5px;
+  right: 30px;
+  animation: float 7s infinite;
+}
+.heart5 {
+  bottom: 12px;
+  left: 90%;
+  animation: float 5s infinite;
+}
+
+.heart6 {
+  bottom: -100px;
+  left: 90%;
+  animation: float 5s infinite;
+}
+
+.heart7 {
+  bottom: -100px;
+  left: 60%;
+  animation: float 5s infinite;
+}
+
+.heart8 {
+  top: -50px;
+  left: 30%;
+  animation: float 5s infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(5);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(2);
+  }
+}
